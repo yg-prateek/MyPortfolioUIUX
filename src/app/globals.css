@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-syne);
+  --font-handwriting: var(--font-patrick);
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+:root {
+  /* GLOBAL POP ART THEME (Light Mode Base) */
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --card: #ffffff;
+  --card-foreground: #000000;
+
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+
+  /* Palette from "Chew Choo" reference */
+  --primary: #C1F07C;
+  /* Neon Green */
+  --primary-foreground: #000000;
+
+  --secondary: #A688FF;
+  /* Bright Purple */
+  --secondary-foreground: #ffffff;
+
+  --accent: #FDE047;
+  /* Yellow */
+  --accent-foreground: #000000;
+
+  --muted: #F3F4F6;
+  --muted-foreground: #4B5563;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #000000;
+  /* Thick Black Borders */
+  --input: #E5E7EB;
+  --ring: #000000;
+
+  --radius: 1rem;
+  /* Playful rounded corners */
+
+  --font-inter: 'Inter', sans-serif;
+  --font-syne: 'Syne', sans-serif;
+  --font-patrick: 'Patrick Hand', cursive;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Reusable Pop Art Utilities - Using standard CSS for complex shadows */
+.pop-card {
+  @apply bg-white border-2 border-black rounded-xl transition-all;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.pop-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.pop-button {
+  @apply px-6 py-3 bg-primary text-black font-black uppercase tracking-wider border-2 border-black rounded-lg transition-all;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.pop-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.pop-button:active {
+  transform: translate(0px, 0px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.pop-badge {
+  @apply px-3 py-1 bg-secondary text-white font-bold text-xs uppercase border-2 border-black rounded-full;
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
