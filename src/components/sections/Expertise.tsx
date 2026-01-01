@@ -2,34 +2,34 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Code2, Palette, Zap, Globe, Cpu, Layers } from "lucide-react";
+import { Rocket, Sparkles, Cpu, Layers } from "lucide-react";
 
 const expertiseItems = [
     {
-        title: "Frontend Architecture",
-        description: "Scalable React & Next.js applications.",
-        icon: <Code2 className="w-6 h-6 text-black" />,
-        color: "bg-[#99E885]",
+        title: "Product & UX Strategy",
+        description: "Research-driven, data-backed designs.",
+        icon: <Rocket className="w-6 h-6 text-black" />,
+        color: "bg-[#C1F07C]",
         className: "md:col-span-2",
     },
     {
-        title: "UI/UX Design",
-        description: "Intuitive & Accessible.",
-        icon: <Palette className="w-6 h-6 text-black" />,
+        title: "AI & Innovation",
+        description: "Designing for the future of AI.",
+        icon: <Cpu className="w-6 h-6 text-black" />,
+        color: "bg-[#A688FF]",
+        className: "md:col-span-1",
+    },
+    {
+        title: "Visual Craft",
+        description: "Branding & visual storytelling.",
+        icon: <Sparkles className="w-6 h-6 text-black" />,
         color: "bg-[#FE90E8]",
         className: "md:col-span-1",
     },
     {
-        title: "Motion & Interaction",
-        description: "Framer Motion & GSAP.",
-        icon: <Zap className="w-6 h-6 text-black" />,
-        color: "bg-[#C0F7FE]",
-        className: "md:col-span-1",
-    },
-    {
-        title: "Web Performance",
-        description: "Lightning fast loads.",
-        icon: <Globe className="w-6 h-6 text-black" />,
+        title: "Engineering Mindset",
+        description: "Bridging the gap between design and code.",
+        icon: <Layers className="w-6 h-6 text-black" />,
         color: "bg-[#FFDC8B]",
         className: "md:col-span-2",
     },
@@ -47,7 +47,7 @@ export function Expertise() {
                 >
                     <div className="bg-white border-2 border-black px-6 py-2 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                         <h2 className="text-sm font-bold uppercase tracking-widest">
-                            02. The Arsenal
+                            The Arsenal
                         </h2>
                     </div>
                 </motion.div>

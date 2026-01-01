@@ -27,7 +27,7 @@ export function ProjectGallery() {
             <div className="max-w-7xl w-full mx-auto">
                 <div className="flex justify-between items-end mb-10 md:mb-20">
                     <div>
-                        <div className="bg-black text-white px-4 py-1 rounded inline-block mb-4 font-bold uppercase text-sm">03. Selected Works</div>
+                        <div className="bg-black text-white px-4 py-1 rounded inline-block mb-4 font-bold uppercase text-sm">Selected Works</div>
                         <h3 className="text-4xl md:text-7xl font-black uppercase tracking-tighter">Recent<br />Projects</h3>
                     </div>
                 </div>

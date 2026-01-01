@@ -9,7 +9,7 @@ export function AboutStory() {
 
                 {/* Decorative Badge */}
                 <div className="absolute top-0 left-0 bg-[#A688FF] text-white font-bold uppercase text-xs px-6 py-2 border-b-4 border-r-4 border-black rounded-br-2xl">
-                    01. The Origin
+                    The Origin
                 </div>
 
                 {/* Narrative Content */}

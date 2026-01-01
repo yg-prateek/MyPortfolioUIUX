@@ -20,12 +20,12 @@ export function Hero() {
                     className="lg:col-span-7 flex flex-col gap-6"
                 >
                     {/* Status Badge */}
-                    <div className="w-fit mb-2 md:mb-4">
+                    {/* <div className="w-fit mb-2 md:mb-4">
                         <div className="px-4 py-2 bg-[#99E885] border-2 border-black rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 animate-bounce-slow">
                             <div className="w-3 h-3 bg-green-600 rounded-full animate-pulse" />
                             <span className="font-bold text-sm uppercase tracking-wider">Available for work</span>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Branding / Name */}
                     <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-[2rem] border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden group flex flex-col xl:flex-row items-center gap-6 lg:gap-8 text-center xl:text-left">
@@ -99,14 +99,14 @@ export function Hero() {
 
                         <div>
                             <div className="flex items-center gap-3 mb-6">
-                                <div className="w-3 h-3 bg-[#FE90E8] rounded-full" />
-                                <h3 className="text-xl font-bold uppercase tracking-widest text-gray-400">About Me</h3>
+                                {/* <div className="w-3 h-3 bg-[#FE90E8] rounded-full" />
+                                <h3 className="text-xl font-bold uppercase tracking-widest text-gray-400">About Me</h3> */}
                             </div>
 
                             <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed text-gray-200">
-                                I'm Prateek, a UI/UX Designer with 2+ years of experience creating intuitive, user-centered digital experiences.
+                                Hi, I’m Prateek. I bridge the gap between physical business and digital growth. As a UI/UX Designer, I help startups and offline brands build powerful digital identities that solve real problems.
                                 <br /><br />
-                                Proficient in interaction and visual design with a strong foundation in design thinking. Skilled at developed adaptive wireframes and prototypes that balance aesthetics and functionality.
+                                Another interesting fact about me is that my work is fueled by a relentless curiosity - I don't call it a day until I’ve paid my daily knowledge tax.
                             </p>
                         </div>
 

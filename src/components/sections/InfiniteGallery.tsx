@@ -58,7 +58,7 @@ export function InfiniteGallery() {
             {/* Header Title with increased spacing and z-index */}
             <div className="max-w-7xl mx-auto mb-24 text-center relative z-30">
                 <div className="bg-[#FE90E8] border-2 border-black px-6 py-2 rounded-full inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6">
-                    <h2 className="text-sm font-bold uppercase tracking-widest text-black">04. The Gallery</h2>
+                    <h2 className="text-sm font-bold uppercase tracking-widest text-black">The Gallery</h2>
                 </div>
                 <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tight">Visual Explorations</h3>
             </div>

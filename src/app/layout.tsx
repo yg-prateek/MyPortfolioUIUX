@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Syne, Patrick_Hand } from "next/font/google"; // Using Syne for display/storytelling
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
+import { LoadingWrapper } from "@/components/layout/LoadingWrapper";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,8 +38,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${syne.variable} ${patrickHand.variable} antialiased bg-background text-foreground font-sans`}
       >
-        <Navbar />
-        {children}
+        <LoadingWrapper>
+          <Navbar />
+          {children}
+        </LoadingWrapper>
       </body>
     </html>
   );

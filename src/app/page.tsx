@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/Hero";
 import { AboutStory } from "@/components/sections/AboutStory";
 import { Expertise } from "@/components/sections/Expertise";
+import { CurrentFocus } from "@/components/sections/CurrentFocus";
 import { ProjectGallery } from "@/components/sections/ProjectGallery";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { InfiniteGallery } from "@/components/sections/InfiniteGallery";
@@ -15,6 +16,7 @@ export default function Home() {
       <div id="expertise">
         <Expertise />
       </div>
+      <CurrentFocus />
       <div id="work">
         <ProjectGallery />
       </div>
