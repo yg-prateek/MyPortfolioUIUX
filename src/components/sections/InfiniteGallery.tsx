@@ -35,7 +35,7 @@ function ParallaxColumn({ items, direction = "up", speed = "normal", className }
                 transition={{ duration: durationValue, ease: "linear", repeat: Infinity }}
             >
                 {[...items, ...items, ...items].map((item, i) => (
-                    <div key={i} className={cn("relative w-full rounded-2xl overflow-hidden bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]", item.aspectRatio)}>
+                    <div key={i} className={cn("relative w-full rounded-2xl overflow-hidden bg-white border-4 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] transition-shadow duration-300", item.aspectRatio)}>
                         {item.type === "video" ? (
                             <video src={item.src} autoPlay muted loop playsInline className="w-full h-full object-cover" />
                         ) : (
@@ -53,14 +53,14 @@ export function InfiniteGallery() {
         <section className="min-h-screen py-32 md:py-48 px-4 md:px-8 bg-background overflow-hidden relative">
 
             {/* Background Grid */}
-            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
             {/* Header Title with increased spacing and z-index */}
             <div className="max-w-7xl mx-auto mb-24 text-center relative z-30">
-                <div className="bg-[#FE90E8] border-2 border-black px-6 py-2 rounded-full inline-block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6">
-                    <h2 className="text-sm font-bold uppercase tracking-widest text-black">The Gallery</h2>
+                <div className="bg-secondary border-4 border-black px-8 py-3 rounded-2xl inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-8 transform rotate-1">
+                    <h2 className="text-sm md:text-base font-black uppercase tracking-[0.2em] text-black">The Gallery</h2>
                 </div>
-                <h3 className="text-4xl md:text-6xl font-black uppercase tracking-tight">Visual Explorations</h3>
+                <h3 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">Visual <br className="md:hidden" /> Explorations</h3>
             </div>
 
             {/* Gallery Grid */}

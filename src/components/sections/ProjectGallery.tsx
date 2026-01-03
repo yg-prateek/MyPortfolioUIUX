@@ -3,22 +3,41 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
     {
         id: 1,
-        title: "Lumina Interface",
-        category: "UI/UX Design",
+        title: "Hello Mentor",
+        category: "Product Design",
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop",
-        color: "bg-[#C0F7FE]"
+        color: "bg-[#99E885]",
+        description: "A simplified NEET counselling platform. Providing aspirants with real-time college predictors and guidance."
     },
     {
         id: 2,
         title: "Kinetic Brand",
         category: "Motion Design",
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop",
-        color: "bg-[#FE90E8]"
+        color: "bg-[#FE90E8]",
+        description: "Designed and developed to solve real-world problems. Focusing on performance interactions."
     },
+    {
+        id: 3,
+        title: "Nexus AI",
+        category: "AI Interface",
+        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop",
+        color: "bg-[#60A5FA]",
+        description: "Next-generation data visualization dashboard for enterprise AI models."
+    },
+    {
+        id: 4,
+        title: "Turbo Frame",
+        category: "Dev Tools",
+        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+        color: "bg-[#F59E0B]",
+        description: "High-performance component library built for speed and accessibility."
+    }
 ];
 
 export function ProjectGallery() {
@@ -36,29 +55,14 @@ export function ProjectGallery() {
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 100, scale: 0.9 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
                             className="bg-white p-4 md:p-8 rounded-[2.5rem] border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] grid grid-cols-1 md:grid-cols-2 gap-8 items-center group hover:translate-y-[-4px] transition-all"
                         >
-                            {/* Content */}
-                            <div className={`order-2 ${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}>
-                                <div className={`inline-block px-4 py-1 rounded-full border-2 border-black font-bold uppercase text-xs mb-6 ${project.color}`}>
-                                    {project.category}
-                                </div>
-                                <h4 className="text-2xl md:text-6xl font-black uppercase mb-6 leading-[0.9]">
-                                    {project.title}
-                                </h4>
-                                <p className="text-gray-500 text-sm md:text-lg font-medium mb-8 max-w-md">
-                                    Designed and developed to solve real-world problems. Focusing on performance interactions.
-                                </p>
-                                <button className="bg-black text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-[#99E885] hover:text-black border-2 border-transparent hover:border-black transition-all flex items-center gap-2">
-                                    View Project <ArrowUpRight className="w-5 h-5" />
-                                </button>
-                            </div>
-
-                            {/* Image Frame */}
-                            <div className={`order-1 ${index % 2 === 1 ? "md:order-2" : "md:order-1"}`}>
+                            {/* Image Frame - Right on even index (0, 2), Left on odd index (1, 3) */}
+                            <div className={`order-1 ${index % 2 === 0 ? "md:order-2" : "md:order-1"}`}>
                                 <div className="aspect-[4/3] rounded-2xl border-2 border-black overflow-hidden relative shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                                     <Image
                                         src={project.image}
@@ -67,6 +71,24 @@ export function ProjectGallery() {
                                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>
+                            </div>
+
+                            {/* Content - Left on even index (0, 2), Right on odd index (1, 3) */}
+                            <div className={`order-2 ${index % 2 === 0 ? "md:order-1" : "md:order-2"}`}>
+                                <div className={`inline-block px-4 py-1 rounded-full border-2 border-black font-bold uppercase text-xs mb-6 ${project.color}`}>
+                                    {project.category}
+                                </div>
+                                <h4 className="text-2xl md:text-6xl font-black uppercase mb-6 leading-[0.9]">
+                                    {project.title}
+                                </h4>
+                                <p className="text-gray-500 text-sm md:text-lg font-medium mb-8 max-w-md">
+                                    {project.description}
+                                </p>
+                                <Link href={`/work/${project.id === 1 ? "hello-mentor" : "kinetic-brand"}`}>
+                                    <button className="bg-black text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-[#99E885] hover:text-black border-2 border-transparent hover:border-black transition-all flex items-center gap-2">
+                                        View Project <ArrowUpRight className="w-5 h-5" />
+                                    </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}
